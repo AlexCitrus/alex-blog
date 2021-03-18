@@ -8,6 +8,9 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "bcrypt": "^5.0.1",
+    "sortablejs": "^1.13.0",
+    "stimulus": "^2.0.0",
+    "stimulus_reflex": "3.4.1",
     "trix": "^1.2.0",
     "turbolinks": "^5.2.0"
   },
