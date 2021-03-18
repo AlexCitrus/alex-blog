@@ -15,6 +15,9 @@ module Authors
 
     # GET /posts/1/edit
     def edit
+      @element = @post.elements.build
+      # @paragraph = @post.elements.build(element_type: 'paragraph') 
+      # @image = @post.elements.build(element_type: 'image') 
     end
 
     # POST /posts
