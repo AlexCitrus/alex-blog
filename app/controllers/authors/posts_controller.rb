@@ -10,7 +10,7 @@ module Authors
      
     # GET /posts/new
     def new
-      # @post = current_author.posts.build
+      @post = current_author.posts.build
     end
 
     # GET /posts/1/edit
