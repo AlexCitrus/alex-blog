@@ -1,6 +1,9 @@
+<div class="container">
 <h4 class="d-flex justify-content-between mb-4">
-  <span>Posts</span>
-<%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
+  <span>All Posts</span>
+<%= link_to new_post_path, class: "btn btn-primary" do %>
+  <i class="fas fa-plus"></i>
+<% end %>
 
 </h4>
 
@@ -31,6 +34,5 @@
     </div>
     <% end %>
 <% end %>
-
-
+</div>
 

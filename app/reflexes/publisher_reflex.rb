@@ -10,6 +10,7 @@ class PublisherReflex < ApplicationReflex
   def unpublish
     post = Post.find(element.dataset[:post_id])
     post.update(published: false, published_at: nil)
+    # post.destroy
   end
 
 

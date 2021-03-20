@@ -3,6 +3,7 @@ module Authors
     class ElementsController < AuthorsController
       before_action :set_post
       before_action :set_element, only: [:update, :destroy]
+
     
       # POST /elements
       def create

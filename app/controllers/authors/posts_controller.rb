@@ -3,6 +3,7 @@ module Authors
   class PostsController < AuthorsController
     before_action :set_post, only: [:edit, :update, :destroy]
 
+
     # GET /posts
     def index
       @posts = current_author.posts
@@ -27,6 +28,7 @@ module Authors
       if @post.save
         redirect_to edit_post_path(@post)
       else
+        # broadcast_errors @post, post_params
         render :new
       end
     end
@@ -36,12 +38,14 @@ module Authors
       if @post.update(post_params)
         redirect_to edit_post_path(@post)
       else
+        broadcast_errors @post, post_params
         render :edit
       end
     end
 
     # DELETE /posts/1
     def destroy
+      @post = Post.find(params[:id])
       @post.destroy
       redirect_to posts_url, notice: 'Post was successfully destroyed.'
     end
